@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:background="@color/blushPink"
+    android:padding="@dimen/stdPadding">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="@dimen/listItemImage"
+        android:layout_height="@dimen/listItemImage"
+        android:contentDescription="@string/broadTitle"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/itemTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/leftImage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemImage"
+        app:layout_constraintStart_toStartOf="@id/itemImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rightImage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/itemImage"
+        app:layout_constraintStart_toEndOf="@id/itemImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="@dimen/listTextWidth"
+        android:layout_height="30dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="@dimen/stdPadding"
+        android:paddingStart="@dimen/stdPadding"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/largeText"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintBottom_toTopOf="@id/itemDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rightImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemDesc"
+        android:layout_width="@dimen/listTextWidth"
+        android:layout_height="60dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingBottom="@dimen/stdPadding"
+        android:paddingLeft="@dimen/stdPadding"
+        android:paddingStart="@dimen/stdPadding"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/smallText"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@id/directions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rightImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
+
+    <ImageView
+        android:id="@+id/directions"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:contentDescription="@string/directions"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/phone"
+        app:layout_constraintStart_toStartOf="@id/rightImage"
+        app:layout_constraintTop_toBottomOf="@id/itemDesc"
+        app:srcCompat="@drawable/baseline_directions_white_48dp" />
+
+    <ImageView
+        android:id="@+id/phone"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:contentDescription="@string/call"
+        android:src="@drawable/baseline_local_phone_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/web"
+        app:layout_constraintStart_toEndOf="@id/directions"
+        app:layout_constraintTop_toBottomOf="@id/itemDesc" />
+
+
+    <ImageView
+        android:id="@+id/web"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:contentDescription="@string/web"
+        android:src="@drawable/baseline_language_white_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/itemDesc" />
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="@dimen/listItemImage"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/stdPadding"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/xSmallText"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemImage" />
+
+
+</android.support.constraint.ConstraintLayout>

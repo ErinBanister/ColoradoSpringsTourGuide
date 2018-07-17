@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/placeDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardImageHeight"
+        android:fitsSystemWindows="true"
+        android:theme="@style/detailAppBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            style="@style/detailAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/largeText"
+            android:textStyle="bold"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/mainImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/detailAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/cardPaddingTop">
+
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cardDoublePadding">
+
+                <LinearLayout
+                    android:id="@+id/titleCard"
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blushPink"
+                    android:orientation="vertical"
+                    android:padding="@dimen/stdPadding">
+
+                    <TextView
+                        android:id="@+id/cardTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/stdPadding"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="@string/broadTitle"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/largeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cardAddress"
+                        style="@style/cardDataStyle"
+                        android:autoLink="map"
+                        android:text="@string/broadAdd" />
+
+                    <TextView
+                        android:id="@+id/cardPhone"
+                        style="@style/cardDataStyle"
+                        android:autoLink="phone"
+                        android:text="@string/broadVar" />
+
+                    <TextView
+                        android:id="@+id/cardWeb"
+                        style="@style/cardDataStyle"
+                        android:autoLink="web"
+                        android:text="@string/broadWeb" />
+
+                    <TextView
+                        android:id="@+id/cardHours"
+                        style="@style/cardDataStyle"
+                        android:text="@string/broadVar" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/cardDoublePadding"
+                android:layout_marginLeft="@dimen/cardDoublePadding"
+                android:layout_marginRight="@dimen/cardDoublePadding">
+
+                <LinearLayout
+                    android:id="@+id/aboutCard"
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blushPink"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/stdPadding"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="@string/about"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/largeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cardDesc"
+                        style="@style/cardAboutStyle"
+                        android:text="@string/broadDesc" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout><!--<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/placeDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blushPink"
+    app:layout_constraintVertical_chainStyle="spread"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:contentDescription="@string/broadTitle"
+        android:scaleType="centerCrop"
+        android:src="@drawable/broadmoor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/broadTitle"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/largeText"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemImage" />
+
+    <ScrollView
+        android:id="@+id/textArea"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollIndicators="right"
+        android:scrollbarSize="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="176dp"
+        tools:scrollbarStyle="insideInset">
+
+        <TextView
+            android:id="@+id/itemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/broadDesc"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/smallText"
+            app:fontFamily="sans-serif" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/contactView"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textArea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textArea"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/broadVar"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/xSmallText"
+            android:linksClickable="true"
+            android:autoLink="phone"/>
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/broadAdd"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/xSmallText"
+            android:visibility="visible"
+            android:autoLink="map"
+            android:linksClickable="true"/>
+
+        <TextView
+            android:id="@+id/webText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/broadWeb"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/xSmallText"
+            android:autoLink="web"
+            android:linksClickable="true"/>
+
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="11am-5pm"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/xSmallText" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>-->
+
+    <!--<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@color/tan_background"
+        android:minHeight="@dimen/list_item_height">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/list_item_height"
+            android:layout_height="@dimen/list_item_height" />
+
+        <RelativeLayout
+            android:id="@+id/text_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/image"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:id="@+id/miwok_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="lutti" />
+
+            <TextView
+                android:id="@+id/default_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/miwok_text_view"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                tools:text="one" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_play_arrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+    -->

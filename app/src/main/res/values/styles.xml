@@ -1,0 +1,99 @@
+<resources>
+
+    <style name="cstgTheme" parent="@style/AppTheme">
+        <!--Style theme-->
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/cstgAppBar</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:navigationBarColor">?android:attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="cstgAppBar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="background">@color/colorPrimary</item>
+        <item name="elevation">0dp</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:titleTextColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="detailAppBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="elevation">0dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:navigationBarColor">?android:attr/colorPrimaryDark</item>
+        <item name="android:statusBarColor">?android:attr/colorPrimaryDark</item>
+        <item name="android:actionBarStyle">@style/detailAppBar.Style</item>
+        <item name="android:homeAsUpIndicator">@mipmap/baseline_arrow_back_ios_white_48dp</item>
+    </style>
+
+    <style name="detailAppBar.Style" parent="detailAppBar">
+        <item name="android:actionBarItemBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+
+    </style>
+
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CardHeaderText">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/largeText</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <style name="cardAboutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/stdPadding</item>
+        <item name="android:layout_marginRight">@dimen/stdPadding</item>
+        <item name="android:layout_marginTop">@dimen/cardInternalPadding</item>
+        <item name="android:layout_marginBottom">@dimen/cardInternalPadding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="cardDataStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/stdPadding</item>
+        <item name="android:layout_marginRight">@dimen/stdPadding</item>
+        <item name="android:layout_marginTop">@dimen/cardInternalPadding</item>
+        <item name="android:layout_marginBottom">@dimen/cardInternalPadding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/smallText</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>
